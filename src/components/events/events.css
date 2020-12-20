@@ -1,0 +1,17 @@
+
+
+.event{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.event-body{
+
+    align-self: flex-end;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2),-5px -5px 5px rgba(0, 0, 0, 0.2);
+
+}
