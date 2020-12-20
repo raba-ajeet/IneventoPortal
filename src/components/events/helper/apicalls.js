@@ -1,7 +1,7 @@
 import { API } from "../../../backend"
 
 export const createEvent = (userId,token,event) => {
-    return fetch(`${API}${userId}/event/create`,{
+    return fetch(`${API}/${userId}/event/create`,{
         method:"POST",
         headers:{
             Accept:"application/json",
@@ -14,7 +14,7 @@ export const createEvent = (userId,token,event) => {
 }
 
 export const getEventList = (userId,token) => {
-    return fetch(`${API}events/org/${userId}`,{
+    return fetch(`${API}/events/org/${userId}`,{
         method:"GET",
         headers:{
             Accept:"application/json",
@@ -26,7 +26,7 @@ export const getEventList = (userId,token) => {
 }
 
 export const deleteEvent = (userId,token,eventId) => {
-    return fetch(`${API}${userId}/event/${eventId}`,{
+    return fetch(`${API}/${userId}/event/${eventId}`,{
         method:"DELETE",
         headers:{
             Accept:"application/json",
@@ -38,7 +38,7 @@ export const deleteEvent = (userId,token,eventId) => {
 }
 
 export const getAllEvents = () => {
-    return fetch(`${API}events`,{
+    return fetch(`${API}/events`,{
         method:"GET",
         headers:{
             Accept:"application/json"

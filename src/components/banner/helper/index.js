@@ -1,7 +1,7 @@
 import { API } from "../../../backend"
 
 export const createBanner = (userId,token,Banner) => {
-    return fetch(`${API}banner/create/${userId}`,{
+    return fetch(`${API}/banner/create/${userId}`,{
         method:"POST",
         headers:{
             Accept:"application/json",
@@ -16,7 +16,7 @@ export const createBanner = (userId,token,Banner) => {
 }
 
 export const getAllBanners = () => {
-    return fetch(`${API}banner`,{
+    return fetch(`${API}/banner`,{
         method:"GET",
         headers:{
             Accept:"application/json"
@@ -26,7 +26,7 @@ export const getAllBanners = () => {
 }
 
 export const deleteBanner = (userId,token,bannerId) => {
-    return fetch(`${API}${userId}/banner/${bannerId}`,{
+    return fetch(`${API}/${userId}/banner/${bannerId}`,{
         method:"DELETE",
         headers:{
             Accept:"application/json",

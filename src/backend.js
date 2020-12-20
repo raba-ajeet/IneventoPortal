@@ -1,1 +1,1 @@
-export const API  = "https://inevento.herokuapp.com/api/";
+export const API  = "https://inevento.herokuapp.com/api";
