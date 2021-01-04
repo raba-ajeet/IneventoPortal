@@ -7,6 +7,7 @@ import Base from "../structure/Base";
 import "../structure/style.css";
 import { isAuthenticated } from "../auth/helper/Index";
 import { deleteEvent, getAllEvents } from "./helper/apicalls";
+const { BASE_URL } = require("../../backend");
 // fadf
 const AllEvents = () => {
   const [eventlist,setEventslist]=useState(); 
@@ -48,6 +49,8 @@ const AllEvents = () => {
               <div className="card-block px-6">
                 <h4 className="card-title">
                   {event.name}
+                  hashashas
+                  {event.eventImage}
                 </h4>
                 <p className="card-text">
                   The Carousel code can be replaced with an img src, no problem.
@@ -72,7 +75,7 @@ const AllEvents = () => {
             <div className="col-md-5">
               <img
                 className="d-block"
-                src={`http://localhost:8000/${event.eventImage}`}
+                src={`${BASE_URL}/${event.eventImage}`}
                 alt=""
                 style={{maxHeight:"300px"}}
               />

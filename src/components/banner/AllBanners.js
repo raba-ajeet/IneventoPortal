@@ -6,7 +6,7 @@ import Base from "../structure/Base";
 import { deleteBanner, getAllBanners } from "./helper";
 import "../structure/style.css";
 import { isAuthenticated } from "../auth/helper/Index";
-
+const {BASE_URL}  = require("../../backend");
 const AllBanners = () => {
   const [bannerlist,setBannerlist]=useState(); 
   const preload = () => {
@@ -71,7 +71,7 @@ const AllBanners = () => {
             <div className="col-md-5">
               <img
                 className="d-block"
-                src={`http://localhost:8000/${banner.bannerImage}`}
+                src={`${BASE_URL}/${banner.bannerImage}`}
                 alt=""
                 style={{maxHeight:"300px"}}
               />

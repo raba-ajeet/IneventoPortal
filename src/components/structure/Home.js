@@ -4,6 +4,9 @@ import { isAuthenticated } from "../auth/helper/Index";
 import { deleteEvent, getEventList } from "../events/helper/apicalls";
 import Base from "./Base";
 import "./style.css";
+
+const {BASE_URL} = require("../../backend");
+
 const Home = () => {
   const [eventslist,setEventslist]=useState(); 
   const preload = () => {
@@ -82,7 +85,7 @@ const Home = () => {
             <div className="col-md-5">
               <img
                 className="d-block"
-                src={`http://localhost:8000/${event.eventImage}`}
+                src={`${BASE_URL}/${event.eventImage}`}
                 alt=""
                 style={{maxHeight:"300px"}}
               />
